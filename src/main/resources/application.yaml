@@ -30,6 +30,7 @@ spring:
               - StripPrefix=${app.gateway.strip-prefix:2}
               #Custom filter defined in spring.factories
               - addDynamicRequestHeaderFromSupplier=X-my-header-from-configuration
+              - RewriteLocationResponseHeader=AS_IN_REQUEST,Location,,
   threads:
     virtual:
       enabled: true
